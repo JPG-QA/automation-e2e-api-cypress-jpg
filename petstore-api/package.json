@@ -1,0 +1,14 @@
+{
+  "name": "petstore-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automatización API de PetStore usando Cypress",
+  "scripts": {
+    "open": "npx cypress open",
+    "test": "rm -rf cypress/reports/* && npx cypress run --spec \"cypress/e2e/petstore-api.spec.js\" --reporter junit --reporter-options mochaFile=cypress/reports/junit/results-[hash].xml,toConsole=true && node scripts/report-html.js",
+    "report": "node scripts/report-html.js"
+  },
+  "devDependencies": {
+    "cypress": "^12.17.0"
+  }
+}

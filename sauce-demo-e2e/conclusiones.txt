@@ -1,0 +1,28 @@
+Conclusiones Sauce Demo E2E
+
+1. Alcance
+   - Se implementó un flujo E2E de compra completo en Sauce Demo, cubriendo login, selección de productos, carrito, checkout y confirmación final.
+   - La solución emplea Cypress junto con Page Object Model para separar responsabilidades y facilitar el mantenimiento.
+
+2. Resultados
+   - Se verificó el login exitoso con las credenciales `standard_user` / `secret_sauce`.
+   - Se agregaron dos productos al carrito y se validó la cantidad y el contenido del carrito.
+   - Se completó el proceso de checkout y se confirmó el mensaje de finalización: "Thank you for your order!".
+
+3. Observaciones
+   - El uso de Page Objects ha permitido una estructura clara de pruebas y una capa de abstracción sobre los pasos de UI.
+   - La externalización de datos en fixtures reduce el acoplamiento entre datos y lógica de prueba.
+   - La centralización de selectores simplifica las actualizaciones ante cambios de interfaz.
+   - Electron resultó estable para ejecuciones locales; la prueba también se valida en Chrome en modo headed.
+   - La confirmación en la UI se muestra como "Thank you for your order!", que no coincide exactamente con la instrucción textual "THANK YOU FOR YOUR ORDER".
+   - En un contexto empresarial, los datos sensibles deben manejarse con variables de entorno (`.env`) fuera del repositorio.
+   - Se añadió generación automática de reportes: al ejecutar `npm test` se crean archivos JUnit
+      en `cypress/reports/junit` y se genera el `cypress/reports/report.html` visible.
+
+4. Recomendaciones
+   - Extender la suite con escenarios de regresión y casos negativos, incluyendo validaciones de errores en login y flujos de carrito.
+   - Integrar la prueba en un pipeline CI/CD con reportes estructurados, screenshots y artefactos persistentes.
+   - Conservar y publicar los reportes generados por `npm test` (ubicados en `cypress/reports`) como artefactos en CI para auditoría y trazabilidad.
+   - Añadir validaciones adicionales de contenido y valores en pantalla para reforzar la calidad de la cobertura.
+   - Conservar la documentación actualizada y entregar el proyecto en un paquete `.zip` o `.rar` con código, reportes y evidencia de ejecución.
+   - Publicar el repositorio de forma pública en GitHub y dejar la URL de acceso en la entrega.

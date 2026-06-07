@@ -1,0 +1,25 @@
+Conclusiones de QA
+
+1. Alcance
+   Se completaron dos componentes de prueba:
+   - Automatización E2E de compra en Sauce Demo.
+   - Prueba API de PetStore para creación, consulta y actualización de mascota.
+
+2. Resultados principales
+   - El flujo de compra se diseñó con pasos claros y validaciones puntuales en cada pantalla.
+   - La confirmación final de compra se verifica mediante el texto exacto "THANK YOU FOR YOUR ORDER".
+   - En la API, se comprobó que una mascota creada puede recuperarse por ID y filtrarse por estado sold.
+
+3. Hallazgos
+   - Sauce Demo es una aplicación estable para pruebas funcionales y permite automatizar el proceso completo sin pasos manuales adicionales.
+   - La API de PetStore responde correctamente a los métodos POST, GET y PUT en los endpoints usados.
+   - La búsqueda por estado es adecuada para validar el cambio de estado de la mascota después de la actualización.
+
+4. Recomendaciones
+   - Si se desea ampliar la cobertura, agregar casos de validación para error en login y búsqueda de mascota inexistente.
+   - Mantener datos dinámicos (ID único) para evitar colisiones al ejecutar las pruebas varias veces.
+   - Incluir un reporte de resultados si se va a ejecutar en un pipeline de CI.
+
+5. Observaciones
+   - Se priorizó la claridad de los pasos y la consistencia entre los casos E2E y API.
+   - La implementación es coherente con la práctica de un QA funcional: verificar estados, mensajes y resultados.

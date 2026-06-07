@@ -1,0 +1,14 @@
+{
+  "name": "sauce-demo-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automatización E2E de Sauce Demo usando Cypress con POM",
+  "scripts": {
+    "open": "npx cypress open",
+    "test": "rm -rf cypress/reports/* && npx cypress run --spec \"cypress/e2e/sauceDemo.spec.js\" --reporter junit --reporter-options mochaFile=cypress/reports/junit/results-[hash].xml,toConsole=true && node scripts/report-html.js",
+    "report": "node scripts/report-html.js"
+  },
+  "devDependencies": {
+    "cypress": "^12.17.0"
+  }
+}

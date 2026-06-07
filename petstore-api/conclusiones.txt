@@ -1,0 +1,18 @@
+Conclusiones PetStore API
+
+1. Alcance
+   - Se automatizó la prueba REST de creación, consulta y actualización de mascota.
+   - Se verificó que la mascota actualizada cambió su estado a sold.
+
+2. Resultados
+   - La API respondió correctamente a POST, GET y PUT.
+   - La búsqueda por estado retornó la mascota actualizada.
+
+3. Observaciones
+   - Es recomendable ejecutar el test en un entorno con conexión estable.
+   - La petición POST usa un ID único para evitar conflictos en llamadas repetidas.
+
+4. Recomendaciones
+   - Agregar casos negativos como mascota inexistente o payload inválido.
+   - Incluir validaciones adicionales de schema si se requiere mayor cobertura.
+   - Mantener el objeto de servicio POM actualizado con nuevos endpoints.
