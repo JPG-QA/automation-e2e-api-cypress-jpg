@@ -1,5 +1,7 @@
 Conclusiones de QA
 
+Repositorio público: https://github.com/JPG-QA/automation-e2e-api-cypress-jpg.git
+
 1. Alcance
    Se completaron dos componentes de prueba:
    - Automatización E2E de compra en Sauce Demo.
