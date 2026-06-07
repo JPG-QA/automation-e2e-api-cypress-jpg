@@ -9,6 +9,6 @@
     "report": "node scripts/report-html.js"
   },
   "devDependencies": {
-    "cypress": "^12.17.0"
+    "cypress": "^15.16.0"
   }
 }
